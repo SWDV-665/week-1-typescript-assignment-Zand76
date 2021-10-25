@@ -1,4 +1,3 @@
-//Create grocery class
 class Grocery {
     fullDetails: string;
 

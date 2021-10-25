@@ -1,4 +1,3 @@
-//Create grocery class
 var Grocery = /** @class */ (function () {
     function Grocery(name, price, quantity) {
         this.name = name;

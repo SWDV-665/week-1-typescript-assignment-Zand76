@@ -1,13 +1,13 @@
 //Create grocery class
 class Grocery {
-    name: string;
-    price: number;
-    quantity: number;
+    fullDetails: string;
 
-    constructor(name: string, price: number, quantity: number){
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+    constructor(
+        public name: string, 
+        public price: number, 
+        public quantity: number
+    )   {
+        this.fullDetails = name + " " + price + " " + quantity;
     }
 }
 
@@ -17,15 +17,10 @@ interface Item {
     quantity: number;
 }
 
-function showList(item: Item) {
-    return "Item Details: " + Item.name + " " + Item.price + " " + Item.quantity;
+function showList(buy: Item) {
+    return "Item: " + buy.name + " Price: $" + buy.price + " Number: " + buy.quantity;
 }
 
-//Create grocery items array
-let grocery_list = [
-    new Grocery('Milk', 1, 3),
-    new Grocery('Bread', 2, 6),
-    new Grocery('Eggs', 3, 11)
-];
+let groceryList = new Grocery("Milk", 4.99, 2);
 
-document.body.textContent = showList(grocery_list);
+document.body.textContent = showList(groceryList);
